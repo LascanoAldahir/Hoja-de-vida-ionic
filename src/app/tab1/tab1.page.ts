@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
-  items: any[] = [];
+  items: string[] = [];
+  maxItems = 50; // Número máximo de elementos a cargar
+  itemsPerLoad = 10; // Número de elementos a cargar por scroll
 
   constructor() {}
 
@@ -15,24 +17,23 @@ export class Tab1Page implements OnInit {
   }
 
   initializeItems() {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < this.itemsPerLoad; i++) {
       this.items.push(`Item ${i}`);
     }
   }
 
   loadData(event: any) {
     setTimeout(() => {
-      console.log('Done');
-
-      for (let i = this.items.length; i < this.items.length + 10; i++) {
-        this.items.push(`Item ${i}`);
+      const currentLength = this.items.length;
+      if (currentLength < this.maxItems) {
+        for (let i = currentLength; i < currentLength + this.itemsPerLoad; i++) {
+          this.items.push(`Item ${i}`);
+        }
       }
-
       event.target.complete();
 
-      // Lógica para determinar si se han cargado todos los datos
-      // y deshabilitar el infinite scroll
-      if (this.items.length == 50) {
+      // Deshabilitar el infinite scroll si se ha alcanzado el máximo de elementos
+      if (this.items.length >= this.maxItems) {
         event.target.disabled = true;
       }
     }, 500);
