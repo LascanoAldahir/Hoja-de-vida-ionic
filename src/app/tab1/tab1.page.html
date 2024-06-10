@@ -1,17 +1,47 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      HOJA DE VIDA
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" style="overflow-y: auto;">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Primero</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div style="position: relative; margin: 0 auto; width: 75%; height: 150px; background-color: #333; display: flex; align-items: center;">
+    <img src="assets/images/perfil.jpg" style="width: 150px; height: 150px; float: left;">
+    <div style="margin-left: 10px; color: white;">
+      <h1 style="font-size: 24px;">LASCANO ALDAHIR</h1>
+      <h1 style="font-size: 14px;">aldahirlascano&#64;gmail.com</h1>
+      <h1 style="font-size: 14px;">0998341271</h1>
+    </div>
+  </div>
+
+  <div style="position: relative; margin: 0 auto; width: 75%; background-color: rgb(255, 255, 255); display: flex; align-items: flex-start; height: 100vh;">
+    <!-- Primera columna -->
+    <div style="flex: 1; color: #000000;">
+      <h2 style="background-color: gray; width: 100%;">Perfil</h2>
+      <p style="padding: 15px; text-align: justify;">Soy un estudiante de la Universidad Escuela Politécnica Nacional (EPN) en busca de oportunidades para seguir aprendiendo y desarrollando mis habilidades. Me considero una persona proactiva, responsable y comprometida con mis objetivos.</p>
+      <h2 style="background-color: #808080; width: 100%;">Experiencia</h2>
+      <h1 style="font-size: 15px; padding: 15px;"><strong>Mantenimiento de Hardware y Software</strong></h1>
+      <h1 style="margin-bottom: 5px; margin-top: 0px; font-size: 15px; padding-left: 15px;">Escuela Politécnica Nacional, Quito (may 2021 - presente)</h1>
+      <h1 style="font-size: 15px; padding: 15px;"><strong>Bachiller en Ciencias</strong></h1>
+      <h1 style="margin-bottom: 5px; margin-top: 0px; font-size: 15px; padding-left: 15px;">Institución Educativa Fiscal Quito, Quito (jun 2017 - jun 2020)</h1>
+    </div>
+  
+    <!-- Segunda columna -->
+    <div style="flex: 1; color: #000000; height: 100 vh; background-color: rgb(204, 204, 204);">
+      <h2 style="background-color: gray; width: 100%;">Datos Personales</h2>    
+      <h1 style="padding: 15px; text-align: justify; font-size: 15px;">Fecha de nacimiento. <br> 17 de Agosto <br><br> Nacionalidad
+        <br>Ecuatoriano <br><br>LinkedIn<br>Aldahir Lascano<br><br>Cédula<br>1750949800</h1>
+      <h2 style="background-color: #808080; width: 100%;">Pasatiempos e intereses</h2>
+      <h1 style="padding: 15px; text-align: justify; font-size: 15px;">Gimnasio. <br> Música <br> Dibujo
+        <br>Creación de contenido multimedia.</h1>
+    </div>    
+  </div>
 </ion-content>
